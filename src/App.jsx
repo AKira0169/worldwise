@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import Product from './pages/product';
 import Pricing from './pages/Pricing';
@@ -8,6 +8,8 @@ import AppLayout from './pages/AppLayout';
 import Login from './pages/Login';
 import CityList from './components/CityList';
 import CountryList from './components/CountryList';
+import City from './components/City';
+import Form from './components/Form';
 
 const URL = 'http://localhost:4000';
 function App() {
@@ -57,9 +59,9 @@ function App() {
           <Route
             index
             element={
-              <CityList
-                cities={cities}
-                loading={isLoading}
+              <Navigate
+                to="cities"
+                replace
               />
             }
           />
@@ -73,6 +75,10 @@ function App() {
             }
           />
           <Route
+            path="cities/:id"
+            element={<City />}
+          />
+          <Route
             path="countries"
             element={
               <CountryList
@@ -83,7 +89,7 @@ function App() {
           />
           <Route
             path="form"
-            element={<p>Form</p>}
+            element={<Form />}
           />
         </Route>
 
