@@ -1,6 +1,9 @@
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import styles from './City.module.css';
-import { useEffect, useState } from 'react';
+import Button from './Button';
+import Spinner from './Spinner';
+import { useEffect } from 'react';
+import { useCities } from '../contexts/CitiesContext';
 
 const formatDate = (date) =>
   new Intl.DateTimeFormat('en', {
@@ -11,26 +14,19 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 function City() {
-  const [currentCity, setCurrentCity] = useState({});
-  const { id } = useParams();
-  const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+  const { getCity, currentCity, isLoading } = useCities();
 
-  const lat = searchParams.get('lat');
-  const lng = searchParams.get('lng');
+  const { id } = useParams();
+
   useEffect(() => {
-    async function fetchCity() {
-      try {
-        const response = await fetch(`http://localhost:4000/cities/${id}`);
-        const data = await response.json();
-        setCurrentCity(data);
-      } catch (error) {
-        alert(error);
-      }
-    }
-    fetchCity();
+    getCity(id);
   }, [id]);
 
   const { cityName, emoji, date, notes } = currentCity;
+  if (isLoading) {
+    return <Spinner />;
+  }
 
   return (
     <div className={styles.city}>
@@ -55,27 +51,20 @@ function City() {
 
       <div className={styles.row}>
         <h6>Learn more</h6>
-        <a
-          href={`https://en.wikipedia.org/wiki/${cityName}`}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={`https://en.wikipedia.org/wiki/${cityName}`} target='_blank' rel='noreferrer'>
           Check out {cityName} on Wikipedia &rarr;
         </a>
       </div>
 
-      <div className={styles.row}>
-        <h6>Map</h6>
-        <div>
-          <h1>
-            position {lat}, {lng}
-          </h1>
-        </div>
+      <div>
+        <Button
+          onclick={() => {
+            navigate(-1);
+          }}
+          type='back'>
+          &larr; Back
+        </Button>
       </div>
-
-      {/* <div>
-        <ButtonBack />
-      </div> */}
     </div>
   );
 }
