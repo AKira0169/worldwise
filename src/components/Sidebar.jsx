@@ -2,16 +2,14 @@ import styles from './Sidebar.module.css';
 import Logo from './Logo.jsx';
 import AppNav from './AppNav';
 import { Outlet } from 'react-router-dom';
+import { Footer } from './Footer.jsx';
 function Sidebar() {
   return (
     <div className={styles.sidebar}>
       <Logo />
       <AppNav />
-
       <Outlet />
-      <footer className={styles.footer}>
-        <p className={styles.copyright}>Copyright &copy; {new Date().getFullYear()} WorldWise. All rights reserved</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
