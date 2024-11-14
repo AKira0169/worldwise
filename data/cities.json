@@ -10,7 +10,7 @@
         "lat": 38.727881642324164,
         "lng": -9.140900099907554
       },
-      "id": 73930385
+      "id": "73930385"
     },
     {
       "cityName": "Madrid",
@@ -22,7 +22,7 @@
         "lat": 40.46635901755316,
         "lng": -3.7133789062500004
       },
-      "id": 17806751
+      "id": "17806751"
     },
     {
       "cityName": "Berlin",
@@ -34,7 +34,103 @@
         "lat": 52.53586782505711,
         "lng": 13.376933665713324
       },
-      "id": 98443197
+      "id": "98443197"
+    },
+    {
+      "id": "34dd",
+      "cityName": "Colborne Parish",
+      "country": "Canada",
+      "date": "2024-10-30T10:53:36.145Z",
+      "emoji": "🇨🇦",
+      "notes": "",
+      "position": {
+        "lat": "47.645283062888666",
+        "lng": "-66.26953125000001"
+      }
+    },
+    {
+      "id": "015f",
+      "cityName": "Avalon",
+      "country": "Canada",
+      "date": "2024-10-30T10:54:36.759Z",
+      "emoji": "🇨🇦",
+      "notes": "",
+      "position": {
+        "lat": "46.68738713021419",
+        "lng": "-53.876953125"
+      }
+    },
+    {
+      "id": "9455",
+      "cityName": "Olmos de Penafiel",
+      "country": "Spain",
+      "date": "2024-10-30T12:07:57.630Z",
+      "emoji": "🇪🇸",
+      "notes": "",
+      "position": {
+        "lat": "41.555763335855325",
+        "lng": "-4.020996093750001"
+      }
+    },
+    {
+      "id": "a2bc",
+      "cityName": "Ourense",
+      "country": "Spain",
+      "date": "2024-10-30T12:08:00.319Z",
+      "emoji": "🇪🇸",
+      "notes": "",
+      "position": {
+        "lat": "42.35613701696165",
+        "lng": "-7.866210937500001"
+      }
+    },
+    {
+      "id": "a1e1",
+      "cityName": "Costa Sudoeste (Site of Community Importance)",
+      "country": "Portugal",
+      "date": "2024-10-30T12:08:03.249Z",
+      "emoji": "🇵🇹",
+      "notes": "",
+      "position": {
+        "lat": "37.08525481320343",
+        "lng": "-8.591308593750002"
+      }
+    },
+    {
+      "id": "26f8",
+      "cityName": "Oliveira do Bairro",
+      "country": "Portugal",
+      "date": "2024-10-30T12:08:07.616Z",
+      "emoji": "🇵🇹",
+      "notes": "",
+      "position": {
+        "lat": "40.54568875528873",
+        "lng": "-8.547363281250002"
+      }
+    },
+    {
+      "id": "5ef1",
+      "cityName": "Noia",
+      "country": "Spain",
+      "date": "2024-10-30T12:08:10.011Z",
+      "emoji": "🇪🇸",
+      "notes": "",
+      "position": {
+        "lat": "42.77741389093116",
+        "lng": "-8.920898437500002"
+      }
+    },
+    {
+      "id": "6f52",
+      "cityName": "Sorihuela",
+      "country": "Spain",
+      "date": "2024-10-31T15:57:39.053Z",
+      "emoji": "🇪🇸",
+      "notes": "",
+      "position": {
+        "lat": "40.46105575257382",
+        "lng": "-5.6689453125"
+      }
     }
   ]
 }
